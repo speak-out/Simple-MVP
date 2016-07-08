@@ -40,5 +40,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="加载一个列表，中途改变数据结构" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="整合两个接口的数据"
+        />
 
 </LinearLayout>

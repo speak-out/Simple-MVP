@@ -17,6 +17,7 @@
         </activity>
         <activity android:name=".mvp.activity.ZhuangBiActivity"></activity>
         <activity android:name=".mvp.activity.MeiMeiActivity"></activity>
+        <activity android:name=".mvp.activity.TotalActivity"></activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

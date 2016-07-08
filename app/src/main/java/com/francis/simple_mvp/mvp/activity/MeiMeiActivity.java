@@ -38,7 +38,7 @@ public class MeiMeiActivity extends AppCompatActivity implements MeiMeiView, Swi
     private void initPresent() {
         meiMeiPresenter = new MeiMeiPresenter();
         meiMeiPresenter.attachView(this);
-        meiMeiPresenter.LoadData(10, 1);
+        meiMeiPresenter.LoadData(100, 1);
     }
 
     private void initView() {

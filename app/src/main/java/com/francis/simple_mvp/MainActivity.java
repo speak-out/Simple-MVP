@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.francis.simple_mvp.mvp.activity.MeiMeiActivity;
+import com.francis.simple_mvp.mvp.activity.TotalActivity;
 import com.francis.simple_mvp.mvp.activity.ZhuangBiActivity;
 import com.francis.simple_mvp.mvp.model.Fact;
 import com.francis.simple_mvp.mvp.model.ZhuangbiBean;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private SwipeRefreshLayout swipeRefreshLayout;
     private FactAdapter adapter;
     private ActionBar actionBar;
+    private Button button3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
+        button3 = (Button) findViewById(R.id.button3);
+        button3.setOnClickListener(this);
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
 
@@ -142,6 +146,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button2:
                 startActivity(new Intent(this, MeiMeiActivity.class));
+                break;
+            case R.id.button3:
+                startActivity(new Intent(this, TotalActivity.class));
                 break;
         }
     }

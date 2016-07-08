@@ -12,6 +12,7 @@ import com.francis.simple_mvp.mvp.view.ZhuangbiView;
 import java.util.List;
 
 import rx.Observer;
+import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
@@ -25,7 +26,7 @@ public class ZhungbiPresenter implements MvpPresenter<ZhuangbiView> {
             return ;
         }
         view.startRefresh();
-        RetrofitNewInstance.getInstance(URLCommon.URL).create(ZhuangbiService.class)
+       final Subscription subscription =  RetrofitNewInstance.getInstance(URLCommon.URL).create(ZhuangbiService.class)
                 .getZhuagnbi("在下")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
